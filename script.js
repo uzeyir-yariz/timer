@@ -1,8 +1,8 @@
 const year = 2023;
 const month = 8; // Ağustos ayı (1-12 arasında)
-const day = 12;
-const hour = 17;
-const minute = 60;
+const day = 31;
+const hour = 20;
+const minute = 0;
 const second = 0;
 
 const targetDate = new Date(year, month - 1, day, hour, minute, second).getTime();
@@ -27,7 +27,7 @@ function updateCountdown() {
     countdownElement.textContent = `${formatNumber(days)} : ${formatNumber(hours)} : ${formatNumber(minutes)} : ${formatNumber(seconds)}`;
   } else {
     const countdownElement = document.getElementById('clock_result');
-    countdownElement.textContent = "Süre doldu!";
+    countdownElement.textContent = "00 : 00 : 00 : 00";
     clearInterval(countdownInterval); // setInterval'i durdur
   }
 }
